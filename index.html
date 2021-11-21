@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <title>😊HELLO😊</title>
+  </head>
+
+
+
+  <body>
+
+    <a-scene cursor="rayOrigin: mouse">
+
+
+      <a-assets>
+        <!-- add 3d model.
+          <a-asset-item id="blabla-model" src=""></a-asset-item>-->
+      </a-assets>
+
+
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4A4E69"></a-box>
+
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#9A8C98"></a-sphere>
+
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#F2E9E4"></a-cylinder>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="8" color="#22223B"></a-plane>
+
+      <a-sky src="https://thumbs.dreamstime.com/b/vr-image-futuristic-sci-fi-city-modern-fiction-skyscrapers-buildings-galaxy-discover-spacescape-119014727.jpg" rotation="0 262 0"></a-sky>
+
+
+      <!-- 3d model asset. -->
+      <!--
+      <a-entity 
+        position="0 1.5 -1" 
+        gtlf-model="#blabla-model" 
+      ></a-entity> -->
+
+
+      <!-- camera rig and raycasting after 3seconds focus on object-->
+
+      <a-entity id="rig">
+
+        <a-entity camera-position="0 2 0" look-controls wasd-controls>
+          <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000"><a-cursor>
+        </a-entity>
+
+      </a-entity>
+
+
+
+    </a-scene>
+
+
+  </body>
+
+</html>
